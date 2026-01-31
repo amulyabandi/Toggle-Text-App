@@ -1,0 +1,13 @@
+const { useState } = React;
+
+export const ToggleApp = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  return (
+    <div id="toggle-container">
+      <button id="toggle-button" onClick={()=>setIsVisible(!isVisible)}>Message</button>
+      {isVisible && (
+      <p id="message">I love freeCodeCamp!</p>)}
+    </div>
+  );
+};
